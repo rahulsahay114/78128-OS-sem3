@@ -25,35 +25,6 @@ public:
 
 };
 
-template <class t>
-void swapp(t &t1, t &t2) //t1 is the smaller item from the bubble sort comparison
-{
-    t temp = t1;
-    t1 = t2;
-    t2 = temp;
-}
-
-template <class t>
-void insertSort(t arr[], t n)
-{
-    int j;
-    t key;
-
-    for(int i=0; i<n; i++)
-    {
-        key = arr[i];
-        j = i-1;
-
-        while(j>=0 && arr[j] > key)
-        {
-            swapp<t>(arr[j+1], arr[j]);
-            j--;
-        }
-
-        arr[j+1] = key;
-    }
-}
-
 void sjf(process* p)
 {
     int totBurst = 0;
